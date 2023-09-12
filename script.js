@@ -35,11 +35,7 @@ function rot13(encodedStr) {
   let decodedArr = []; // Your Result goes here
   // Only change code below this line
 	for (let i = 0; i < encodedStr.length; i++) {
-		let code = encodedStr.charAt(i) + 13;
-		while (code > 122) {
-			code = (code - 122)+ 96;
-		}
-		decodedArr.push(String.encodedStr(code));
+		decodedArr += lookup[encodedStr[i]];
 	}
   return; //return decodedArr
 }
